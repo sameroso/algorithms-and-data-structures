@@ -22,12 +22,12 @@ class Stack<TItem extends any> {
     this.items = [];
   }
 
-  isEmpty() {
+  get isEmpty() {
     return this.items.length === 0;
   }
 
   pop() {
-    if (this.isEmpty()) return undefined;
+    if (this.isEmpty) return undefined;
     return this.items.pop();
   }
 }
