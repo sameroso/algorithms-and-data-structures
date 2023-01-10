@@ -14,8 +14,12 @@ class Stack<TItem extends any> {
     }
   }
 
-  get size(){
-    return this,this.items.length
+  get size() {
+    return this, this.items.length;
+  }
+
+  clear() {
+    this.items = [];
   }
 
   isEmpty() {
