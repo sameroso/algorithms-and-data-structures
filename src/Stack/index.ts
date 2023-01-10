@@ -30,6 +30,10 @@ class Stack<TItem extends any> {
     if (this.isEmpty) return undefined;
     return this.items.pop();
   }
+
+  peek() {
+    return this.items[this.items.length - 1];
+  }
 }
 
 export default Stack;
