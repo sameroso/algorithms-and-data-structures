@@ -67,4 +67,20 @@ describe("Stack tests", () => {
     stack.clear();
     expect(stack.isEmpty).toBe(true);
   });
+
+  it("should get last element items calling peek method", () => {
+    const stack = new Stack([1, 2, 3, 4]);
+    expect(stack.peek()).toBe(4);
+
+    stack.clear();
+    expect(stack.peek()).toBe(undefined);
+  });
+
+  it("should get undefined calling peek method when stack is empty", () => {
+    const stack = new Stack([1, 2, 3, 4]);
+    expect(stack.peek()).toBe(4);
+
+    stack.clear();
+    expect(stack.peek()).toBe(undefined);
+  });
 });
