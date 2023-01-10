@@ -38,25 +38,33 @@ describe("Stack tests", () => {
 
   it("should add more than one element when pushing more than one element", () => {
     const stack = new Stack();
-    stack.push([1,2]);
-    
+    stack.push([1, 2]);
+
     expect(stack.size).toBe(2);
   });
 
   it("pop should return last element", () => {
     const stack = new Stack();
-    stack.push([1,2]);
+    stack.push([1, 2]);
 
-    const lastElement = stack.pop()
-    
+    const lastElement = stack.pop();
+
     expect(lastElement).toBe(2);
   });
 
   it("pop should return undefined when stack is empty", () => {
     const stack = new Stack();
 
-    const lastElement = stack.pop()
-    
+    const lastElement = stack.pop();
+
     expect(lastElement).toBe(undefined);
+  });
+
+  it("should clear all items calling clear method", () => {
+    const stack = new Stack([1, 2, 3, 4]);
+    expect(stack.isEmpty()).toBe(false);
+
+    stack.clear();
+    expect(stack.isEmpty()).toBe(true);
   });
 });
