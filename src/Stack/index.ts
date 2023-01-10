@@ -14,15 +14,16 @@ class Stack<TItem extends any> {
     }
   }
 
+  get size(){
+    return this,this.items.length
+  }
+
   isEmpty() {
     return this.items.length === 0;
   }
 
-  getItems() {
-    return [...this.items];
-  }
-
   pop() {
+    if (this.isEmpty()) return undefined;
     return this.items.pop();
   }
 }
